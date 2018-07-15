@@ -1,0 +1,325 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Varela Round', 'Barlow', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+	margin: 0;
+}
+
+
+/****************************************************/
+
+  /* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  
+  animation: fade 2s;
+
+}
+
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/**************************************************/
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+h2,
+a {
+	color: #093a58;
+}
+h2
+ {
+	margin-top: 0;
+    }
+
+.portf h2, .prim9 h2 {
+    color: red;
+}
+.portf h2{
+    margin-bottom:2em;
+    
+}
+  
+  
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+    border-radius: 7px;
+    transition: transform 1s;
+   }
+
+
+ .image:hover  {
+     
+    transform: rotate(10deg);
+     cursor: pointer;
+     transition: transform 2s cubic-bezier(.45,-0.41,.72,1.48);
+}
+.prim6 .image:hover, .prim7 .image:hover,  .prim8 .image:hover {
+      transform: rotate(-10deg);
+     cursor: pointer;
+    transition: transform 2s cubic-bezier(.45,-0.41,.72,1.48);
+}
+
+.prim11 img:hover {
+      transform: scale(1.2);
+    transition: transform 2s cubic-bezier(.45,-0.41,.72,1.48);
+        
+}
+
+.prim1 {
+    margin-top: 10px;
+}
+.prim2, .prim9 {
+    font-size: 1.3em;
+    font-family: 'Barlow';
+    
+}
+h2, .prim9 {
+    text-align: center;
+    
+}
+.row {
+    text-align: justify;
+}
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.35em;
+	margin: 0;
+}
+.main-nav {
+	margin-top: 5px;
+        
+}
+
+.name a,
+.main-nav a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
+    transition: all 0.5s ease-in-out;
+}
+.main-nav a {
+	font-size: .95em;
+	color: blue;
+	text-transform: uppercase;
+        
+}
+.main-nav a:hover, .name a:hover {
+	color: #284a59;
+    border-bottom-style: solid;
+    background-color: #ffdb4d;
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+	padding: .5em 5% 0.5em;
+	background-color: #d4a1e2;
+    width: 100%;
+    z-index: 10;
+}
+
+.col {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+.main-footer {
+	background: #c8e5df;
+	margin-top: 30px;
+    padding: .5em 5% 0.5em;
+	text-align: center;
+    width: 100%;
+}
+
+
+.bounce {
+    transition: all 2s ease-in-out;
+        
+/*        cubic-bezier(.45,-0.41,.72,1.48);*/
+}
+
+
+
+
+/* ---- Page Elements ---- */
+
+
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+@media (max-width: 767.5px) {
+    .main-footer ul li:not(:last-child) {
+        display: none;
+       }
+    .main-footer {
+        display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+@media (min-width: 768px) {
+
+   
+	.row {
+		width: 90%;
+		margin: 0 auto;
+	}
+    
+	.main-header, .main-footer,
+	.main-nav,
+	.row {
+		display: flex;
+	}
+
+	.main-header {
+
+        justify-content: space-between;
+        position: fixed;        
+	}
+    
+    .main-footer {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+    
+    
+	.col {
+		flex: 50%;
+	}
+
+	.row {
+		flex-wrap: wrap;
+	}
+
+    .prim1, .prim2 {
+        margin-top: 150px;
+    }
+	.prim2 {
+		order: -1;
+        	}
+    .portf {
+        flex: 100vw;
+                      
+    }
+    
+    .main-footer ul li:last-child {
+        display: none;
+        
+    }
+    #portfolio, #interests {
+    padding-top: 5em;
+        
+}
+}
+
+@media (min-width: 1024px) {
+
+    
+	.row {
+		width: 90%;
+		
+	}
+    
+    
+    
+	.main-header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.col {
+		flex-basis: 33.3%;
+	}
+    .prim1, .prim2 {
+        flex: 50%;
+    }
+
+    .prim9, .portf {
+        flex: 100%;
+    }
+	#portfolio, #interests {
+    padding-top: 3em;
+}
+ 
+   
+}
